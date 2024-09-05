@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TaskManagerApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+<body>
+  <header>
+    <div class="header-logo">
+      <%= link_to("TaskManager", "/") %>
+    </div>
+    <ul class="header-menus">
+      <li>
+        <%= link_to("本アプリについて", "/about") %>
+      </li>
+      <li>
+        <%= link_to("タスク一覧", "/tasks/index")%>
+      </li>
+      <li>
+        <%= link_to("新規作成", "/tasks/new")%>
+      </li>
+    </ul>
+  </header>    
+    <%= yield %>
+  </body>
+</html>

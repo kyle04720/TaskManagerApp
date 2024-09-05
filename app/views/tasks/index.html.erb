@@ -1,0 +1,10 @@
+
+<div class="main tasks-index">
+  <div class="container">
+    <% @tasks.each do |task| %>
+    <div class="tasks-index-item">
+      <%= link_to(task.content, "/tasks/#{task.id}")%>
+    </div>
+    <% end %>
+  </div>
+</div>
