@@ -3,7 +3,8 @@
   <div class="container">
     <% @tasks.each do |task| %>
     <div class="tasks-index-item">
-      <%= link_to(task.content, "/tasks/#{task.id}")%>
+      <h3><%= link_to(task.content, "/tasks/#{task.id}")%></h3>
+      <p><%= link_to(task.deadline, "/tasks/#{task.id}")%></p>
     </div>
     <% end %>
   </div>

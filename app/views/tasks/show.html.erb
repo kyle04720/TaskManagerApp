@@ -1,9 +1,15 @@
 <div class="main tasks-show">
   <div class="container">
     <div class="tasks-show-item">
-      <p>
-        <%= @task.content %>
-      </p>
+      <h2><%= @task.content %></h2>
+      <h3>期限</h3>
+      <p><%= @task.deadline %></p>
+      <h3>Tag</h3>
+      <p><%= @task.tag %></p>
+      <div class="task-menus">
+        <%= link_to("編集", "/tasks/#{@task.id}/edit")%>
+        <%= link_to("削除", "/tasks/#{@task.id}/destroy")%>
+      </div>
     </div>
   </div>
 </div>
