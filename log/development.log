@@ -7014,3 +7014,63 @@ Processing by HomeController#top as HTML
 Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 1942)
 
 
+Started GET "/" for ::1 at 2024-09-15 17:19:26 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 4.2ms | Allocations: 339)
+  Rendered layout layouts/application.html.erb (Duration: 1003.8ms | Allocations: 44845)
+Completed 200 OK in 1089ms (Views: 1026.7ms | ActiveRecord: 0.0ms | Allocations: 49372)
+
+
+Started GET "/" for ::1 at 2024-09-15 17:19:30 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.6ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 1653)
+Completed 200 OK in 26ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 1930)
+
+
+Started GET "/about" for ::1 at 2024-09-15 17:19:32 +0900
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 2.4ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 1781)
+Completed 200 OK in 27ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 2117)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-15 17:19:35 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 55.4ms | Allocations: 5068)
+  Rendered layout layouts/application.html.erb (Duration: 72.1ms | Allocations: 6803)
+Completed 200 OK in 116ms (Views: 90.6ms | ActiveRecord: 2.4ms | Allocations: 8783)
+
+
+Started GET "/tasks/new" for ::1 at 2024-09-15 17:19:37 +0900
+Processing by TasksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (Duration: 257.1ms | Allocations: 2783)
+  Rendered layout layouts/application.html.erb (Duration: 280.9ms | Allocations: 4284)
+Completed 200 OK in 293ms (Views: 284.4ms | ActiveRecord: 0.0ms | Allocations: 4618)
+
+
+Started GET "/tasks/14" for ::1 at 2024-09-15 17:19:38 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 8.7ms | Allocations: 280)
+  Rendered layout layouts/application.html.erb (Duration: 148.5ms | Allocations: 1923)
+Completed 200 OK in 313ms (Views: 265.4ms | ActiveRecord: 0.6ms | Allocations: 4594)
+
+

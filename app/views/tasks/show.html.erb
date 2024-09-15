@@ -7,6 +7,7 @@
       <h3>Tag</h3>
       <p><%= @task.tag %></p>
       <div class="task-menus">
+        <%= link_to("完了", "/tasks/#{@task.id}/destroy")%>        
         <%= link_to("編集", "/tasks/#{@task.id}/edit")%>
         <%= link_to("削除", "/tasks/#{@task.id}/destroy")%>
       </div>
