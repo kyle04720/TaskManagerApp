@@ -28,11 +28,8 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find_by(id: params[:id])
-    @task.content = params[:task][:content]
-    @task.deadline = params[:task][:deadline]
-    @task.tag = params[:task][:tag]
     
-    if @task.save
+    if @task.update(task_params)
       flash[:notice] = "内容を変更しました"
       redirect_to("/tasks/index")
     else
@@ -47,9 +44,9 @@ class TasksController < ApplicationController
     redirect_to("/tasks/index")
   end
 
-  #private
-  #def task_params
-  #  params.require(:task).permit(:content, :deadline)
-  #end
+  private
+  def task_params
+    params.require(:task).permit(:content, :deadline)
+  end
 
 end
