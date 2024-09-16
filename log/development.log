@@ -8595,3 +8595,1850 @@ Processing by TasksController#new as HTML
 Completed 200 OK in 87ms (Views: 79.7ms | ActiveRecord: 0.0ms | Allocations: 3649)
 
 
+Started GET "/" for ::1 at 2024-09-16 10:27:20 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 446.0ms | Allocations: 343)
+  Rendered layout layouts/application.html.erb (Duration: 6687.8ms | Allocations: 34472)
+Completed 200 OK in 7271ms (Views: 6957.7ms | ActiveRecord: 0.0ms | Allocations: 39000)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 10:27:32 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 156.4ms | Allocations: 5485)
+  Rendered layout layouts/application.html.erb (Duration: 350.5ms | Allocations: 7241)
+Completed 200 OK in 675ms (Views: 486.5ms | ActiveRecord: 7.9ms | Allocations: 9281)
+
+
+Started GET "/about" for ::1 at 2024-09-16 10:27:37 +0900
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 2.3ms | Allocations: 115)
+Started GET "/tasks/index" for ::1 at 2024-09-16 10:27:37 +0900
+  Rendered layout layouts/application.html.erb (Duration: 115.5ms | Allocations: 2115)
+Completed 200 OK in 227ms (Views: 217.2ms | ActiveRecord: 0.0ms | Allocations: 2529)
+
+
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 622)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 2264)
+Completed 200 OK in 39ms (Views: 31.1ms | ActiveRecord: 0.4ms | Allocations: 2577)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 10:27:38 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 20.0ms | Allocations: 622)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 2290)
+Completed 200 OK in 45ms (Views: 37.3ms | ActiveRecord: 0.3ms | Allocations: 2727)
+
+
+Started GET "/tasks/17" for ::1 at 2024-09-16 10:27:39 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 324)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 1960)
+Completed 200 OK in 38ms (Views: 16.1ms | ActiveRecord: 1.0ms | Allocations: 4634)
+
+
+Started GET "/tasks/17" for ::1 at 2024-09-16 10:28:27 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 334)
+  Rendered layout layouts/application.html.erb (Duration: 54.9ms | Allocations: 15866)
+Completed 200 OK in 95ms (Views: 65.2ms | ActiveRecord: 2.5ms | Allocations: 20590)
+
+
+Started GET "/tasks/17/destroy" for ::1 at 2024-09-16 10:28:30 +0900
+Processing by TasksController#destroy as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:36:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:37:in `destroy'
+  [1m[36mTask Destroy (53.6ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 17]]
+  ↳ app/controllers/tasks_controller.rb:37:in `destroy'
+  [1m[36mTRANSACTION (17.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:37:in `destroy'
+Redirected to http://localhost:3000/tasks/index
+Completed 302 Found in 90ms (ActiveRecord: 71.1ms | Allocations: 2411)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 10:28:30 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 768)
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | Allocations: 2427)
+Completed 200 OK in 39ms (Views: 34.9ms | ActiveRecord: 0.4ms | Allocations: 2810)
+
+
+Started GET "/tasks/17/edit" for ::1 at 2024-09-16 10:28:30 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 18.0ms | Allocations: 3419)
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 4911)
+Completed 200 OK in 37ms (Views: 29.8ms | ActiveRecord: 0.2ms | Allocations: 5714)
+
+
+Started GET "/tasks/17/edit" for ::1 at 2024-09-16 10:29:57 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2218)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 4040)
+Completed 200 OK in 34ms (Views: 26.1ms | ActiveRecord: 0.2ms | Allocations: 5335)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 10:30:04 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 711)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 2355)
+Completed 200 OK in 33ms (Views: 26.1ms | ActiveRecord: 0.3ms | Allocations: 2721)
+
+
+Started GET "/about" for ::1 at 2024-09-16 10:30:05 +0900
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 1.5ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 1829)
+Completed 200 OK in 29ms (Views: 22.0ms | ActiveRecord: 0.0ms | Allocations: 2483)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 10:30:06 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (2.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 537)
+  Rendered layout layouts/application.html.erb (Duration: 48.4ms | Allocations: 2188)
+Completed 200 OK in 62ms (Views: 55.5ms | ActiveRecord: 2.0ms | Allocations: 2496)
+
+
+Started GET "/tasks/new" for ::1 at 2024-09-16 10:30:06 +0900
+Processing by TasksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2140)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 3649)
+Completed 200 OK in 22ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 3983)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 10:30:07 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 537)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 2190)
+Completed 200 OK in 23ms (Views: 18.7ms | ActiveRecord: 0.4ms | Allocations: 2497)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 10:30:08 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 537)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 2169)
+Completed 200 OK in 24ms (Views: 19.4ms | ActiveRecord: 0.4ms | Allocations: 2476)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 10:31:14 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 716)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 2694)
+Completed 200 OK in 35ms (Views: 28.7ms | ActiveRecord: 0.3ms | Allocations: 3551)
+
+
+Started GET "/tasks/new" for ::1 at 2024-09-16 10:31:15 +0900
+Processing by TasksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2136)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 3637)
+Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 3971)
+
+
+Started POST "/tasks/create" for ::1 at 2024-09-16 10:31:50 +0900
+Processing by TasksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"スクワット100回", "deadline"=>"2024-09-16T23:59", "tag"=>"筋トレ", "commit"=>"作成"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:17:in `create'
+  [1m[36mTask Create (2.2ms)[0m  [1m[32mINSERT INTO "tasks" ("content", "created_at", "updated_at", "deadline", "tag", "complete") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "スクワット100回"], ["created_at", "2024-09-16 01:31:50.838883"], ["updated_at", "2024-09-16 01:31:50.838883"], ["deadline", "2024-09-16 23:59:00"], ["tag", "筋トレ"], ["complete", nil]]
+  ↳ app/controllers/tasks_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:17:in `create'
+Redirected to http://localhost:3000/tasks/index
+Completed 302 Found in 37ms (ActiveRecord: 11.1ms | Allocations: 3640)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 10:31:50 +0900
+Processing by TasksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 619)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 2260)
+Completed 200 OK in 26ms (Views: 18.7ms | ActiveRecord: 0.3ms | Allocations: 2609)
+
+
+Started GET "/tasks/18" for ::1 at 2024-09-16 10:31:53 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 313)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 1967)
+Completed 200 OK in 38ms (Views: 22.3ms | ActiveRecord: 0.5ms | Allocations: 2780)
+
+
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 10:31:55 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2093)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 3605)
+Completed 200 OK in 34ms (Views: 20.3ms | ActiveRecord: 0.4ms | Allocations: 4419)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 10:35:10 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 2323)
+  Rendered layout layouts/application.html.erb (Duration: 69.4ms | Allocations: 17645)
+Completed 200 OK in 86ms (Views: 72.0ms | ActiveRecord: 1.9ms | Allocations: 19353)
+
+
+Started GET "/tasks/18" for ::1 at 2024-09-16 10:35:12 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 99)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 1755)
+Completed 200 OK in 16ms (Views: 9.3ms | ActiveRecord: 0.3ms | Allocations: 3113)
+
+
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 10:35:13 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1887)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3379)
+Completed 200 OK in 14ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 4135)
+
+
+Started GET "/tasks/new" for ::1 at 2024-09-16 13:25:32 +0900
+Processing by TasksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1861)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 3362)
+Completed 200 OK in 37ms (Views: 32.5ms | ActiveRecord: 0.0ms | Allocations: 3637)
+
+
+Started POST "/tasks/create" for ::1 at 2024-09-16 13:26:05 +0900
+Processing by TasksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"基本情報", "deadline"=>"2024-09-17T23:59", "tag"=>"勉強", "commit"=>"作成"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:17:in `create'
+  [1m[36mTask Create (2.5ms)[0m  [1m[32mINSERT INTO "tasks" ("content", "created_at", "updated_at", "deadline", "tag", "complete") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "基本情報"], ["created_at", "2024-09-16 04:26:05.523725"], ["updated_at", "2024-09-16 04:26:05.523725"], ["deadline", "2024-09-17 23:59:00"], ["tag", "勉強"], ["complete", nil]]
+  ↳ app/controllers/tasks_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (11.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:17:in `create'
+Redirected to http://localhost:3000/tasks/index
+Completed 302 Found in 151ms (ActiveRecord: 17.0ms | Allocations: 2453)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 13:26:05 +0900
+Processing by TasksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 722)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 2395)
+Completed 200 OK in 24ms (Views: 18.9ms | ActiveRecord: 0.4ms | Allocations: 2703)
+
+
+Started GET "/tasks/19" for ::1 at 2024-09-16 13:26:07 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 1775)
+Completed 200 OK in 26ms (Views: 15.6ms | ActiveRecord: 0.5ms | Allocations: 2562)
+
+
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:26:10 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1862)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 3357)
+Completed 200 OK in 24ms (Views: 16.8ms | ActiveRecord: 0.2ms | Allocations: 4112)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 13:26:16 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 688)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 2334)
+Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 0.7ms | Allocations: 2641)
+
+
+Started GET "/tasks/19" for ::1 at 2024-09-16 13:26:19 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 1733)
+Completed 200 OK in 26ms (Views: 16.6ms | ActiveRecord: 0.6ms | Allocations: 2488)
+
+
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:26:20 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1848)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 3341)
+Completed 200 OK in 21ms (Views: 14.5ms | ActiveRecord: 0.5ms | Allocations: 4096)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 13:26:35 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 688)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 2331)
+Completed 200 OK in 24ms (Views: 17.5ms | ActiveRecord: 0.5ms | Allocations: 2638)
+
+
+Started GET "/tasks/19" for ::1 at 2024-09-16 13:26:41 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 1755)
+Completed 200 OK in 27ms (Views: 19.6ms | ActiveRecord: 0.3ms | Allocations: 2510)
+
+
+Started GET "/tasks/19" for ::1 at 2024-09-16 13:26:42 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 1732)
+Completed 200 OK in 23ms (Views: 14.6ms | ActiveRecord: 0.3ms | Allocations: 2487)
+
+
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:26:45 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1856)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 3350)
+Completed 200 OK in 22ms (Views: 14.3ms | ActiveRecord: 0.2ms | Allocations: 4105)
+
+
+Started POST "/tasks/19/update" for ::1 at 2024-09-16 13:27:29 +0900
+Processing by TasksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"基本情報P220～", "deadline"=>"2024-09-17T23:59", "tag"=>"勉強", "commit"=>"保存", "id"=>"19"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:30:in `update'
+Completed 400 Bad Request in 24ms (ActiveRecord: 0.3ms | Allocations: 1194)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:49:in `task_params'
+app/controllers/tasks_controller.rb:32:in `update'
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:27:30 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1870)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 3385)
+Completed 200 OK in 29ms (Views: 15.7ms | ActiveRecord: 0.4ms | Allocations: 4141)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 13:27:31 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 688)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 2352)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.3ms | Allocations: 2659)
+
+
+Started GET "/tasks/19" for ::1 at 2024-09-16 13:27:34 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 1718)
+Completed 200 OK in 21ms (Views: 13.3ms | ActiveRecord: 0.3ms | Allocations: 2473)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 13:35:56 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 911)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 2893)
+Completed 200 OK in 26ms (Views: 19.3ms | ActiveRecord: 0.7ms | Allocations: 3863)
+
+
+Started GET "/tasks/19" for ::1 at 2024-09-16 13:35:57 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 307)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 1948)
+Completed 200 OK in 12ms (Views: 6.9ms | ActiveRecord: 0.2ms | Allocations: 2794)
+
+
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:35:58 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1199)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 1281)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms | Allocations: 2081)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="main tasks-new">
+    <div class="container">
+      <h1 class="form-heading">編集</h1>
+        <%= form_with url: "/tasks/#{@task.id}/update", method: :post, local: true do |f| %>
+          <div class="form">
+            <div class="form-body">
+              <%= f.text_area :content %>
+              <label class="control-label" for="">期限</label>
+              <%= f.datetime_local_field :deadline %>
+              <label class="control-label" for="">タグ</label>
+              <%= f.text_field :tag %>
+              <%= f.submit "保存" %>
+            </div>
+          </div>
+    </div>
+</div>
+):
+1:    <div class="main tasks-new">
+2:        <div class="container">
+3:          <h1 class="form-heading">編集</h1>
+4:            <%= form_with url: "/tasks/#{@task.id}/update", method: :post, local: true do |f| %>
+5:              <div class="form">
+6:                <div class="form-body">
+7:                  <%= f.text_area :content %>
+8:                  <label class="control-label" for="">期限</label>
+9:                  <%= f.datetime_local_field :deadline %>
+10:                  <label class="control-label" for="">タグ</label>
+11:                  <%= f.text_field :tag %>
+12:                  <%= f.submit "保存" %>
+13:                </div>
+14:              </div>
+15:        </div>
+16:    </div>
+  
+app/views/tasks/edit.html.erb:18: syntax error, unexpected end-of-input, expecting `end' or dummy end
+app/views/tasks/edit.html.erb:18: syntax error, unexpected end-of-input, expecting `end' or dummy end
+app/views/tasks/edit.html.erb:18: syntax error, unexpected end-of-input, expecting `end' or dummy end
+app/views/tasks/edit.html.erb:18: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:37:43 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2140)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3981)
+Completed 200 OK in 18ms (Views: 13.2ms | ActiveRecord: 0.1ms | Allocations: 5283)
+
+
+Started GET "/tasks/19" for ::1 at 2024-09-16 13:37:53 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 307)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 1942)
+Completed 200 OK in 11ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 2756)
+
+
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:37:55 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1848)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3340)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 4095)
+
+
+Started POST "/tasks/19/update" for ::1 at 2024-09-16 13:38:30 +0900
+Processing by TasksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"基本情報P220～", "deadline"=>"2024-09-17T23:59", "tag"=>"st", "commit"=>"保存", "id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:30:in `update'
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.1ms | Allocations: 1143)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:49:in `task_params'
+app/controllers/tasks_controller.rb:32:in `update'
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:38:30 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1859)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3371)
+Completed 200 OK in 12ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 4125)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 13:38:33 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 865)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 2534)
+Completed 200 OK in 18ms (Views: 10.6ms | ActiveRecord: 0.2ms | Allocations: 2899)
+
+
+Started GET "/tasks/18" for ::1 at 2024-09-16 13:39:23 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1748)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 2503)
+
+
+Started GET "/tasks/19" for ::1 at 2024-09-16 13:39:46 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 1726)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 2481)
+
+
+Started GET "/tasks/19" for ::1 at 2024-09-16 13:39:46 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 1733)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 2488)
+
+
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:40:35 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1855)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3348)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.1ms | Allocations: 4103)
+
+
+Started GET "/tasks/19" for ::1 at 2024-09-16 13:40:46 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1736)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 2490)
+
+
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:40:50 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1869)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3361)
+Completed 200 OK in 15ms (Views: 9.7ms | ActiveRecord: 0.3ms | Allocations: 4116)
+
+
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:40:58 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1858)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3363)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.1ms | Allocations: 4117)
+
+
+Started POST "/tasks/19/update" for ::1 at 2024-09-16 13:42:18 +0900
+Processing by TasksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"edit", "deadline"=>"2024-10-11T20:00", "tag"=>"tag", "commit"=>"保存", "id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:30:in `update'
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.1ms | Allocations: 1152)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:49:in `task_params'
+app/controllers/tasks_controller.rb:32:in `update'
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:42:19 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1868)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3380)
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 4134)
+
+
+Started GET "/" for ::1 at 2024-09-16 13:45:39 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 5.0ms | Allocations: 339)
+  Rendered layout layouts/application.html.erb (Duration: 212.6ms | Allocations: 35373)
+Completed 200 OK in 306ms (Views: 240.2ms | ActiveRecord: 0.0ms | Allocations: 39900)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 13:45:42 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 38.5ms | Allocations: 5552)
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 7267)
+Completed 200 OK in 85ms (Views: 64.3ms | ActiveRecord: 2.2ms | Allocations: 9308)
+
+
+Started GET "/about" for ::1 at 2024-09-16 13:45:44 +0900
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 1.4ms | Allocations: 105)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 1751)
+Completed 200 OK in 23ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 2087)
+
+
+Started GET "/tasks/19" for ::1 at 2024-09-16 13:45:46 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 324)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 1965)
+Completed 200 OK in 53ms (Views: 24.2ms | ActiveRecord: 1.2ms | Allocations: 4640)
+
+
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:45:48 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 29.0ms | Allocations: 2782)
+  Rendered layout layouts/application.html.erb (Duration: 40.0ms | Allocations: 4295)
+Completed 200 OK in 74ms (Views: 41.9ms | ActiveRecord: 0.2ms | Allocations: 5123)
+
+
+Started GET "/tasks/19" for ::1 at 2024-09-16 13:49:39 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 320)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 2297)
+Completed 200 OK in 20ms (Views: 15.2ms | ActiveRecord: 0.2ms | Allocations: 3613)
+
+
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:49:41 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 128.3ms | Allocations: 16277)
+  Rendered layout layouts/application.html.erb (Duration: 129.5ms | Allocations: 16359)
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 0.2ms | Allocations: 17179)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="main tasks-new">
+    <div class="container">
+      <h1 class="form-heading">編集</h1>
+        <%= form_with url: "/tasks/#{@task.id}/update", method: :post, local: true do |f| %>
+          <div class="form">
+            <div class="form-body">
+              <%= f.text_area :content value: @task.content %>
+              <label class="control-label" for="">期限</label>
+              <%= f.datetime_local_field :deadline value: @task.deadline %>
+              <label class="control-label" for="">タグ</label>
+              <%= f.text_field :tag value: @task.tag%>
+              <%= f.submit "保存" %>
+            </div>
+          </div>
+        <% end %>  
+    </div>
+</div>
+):
+1:    <div class="main tasks-new">
+2:        <div class="container">
+3:          <h1 class="form-heading">編集</h1>
+4:            <%= form_with url: "/tasks/#{@task.id}/update", method: :post, local: true do |f| %>
+5:              <div class="form">
+6:                <div class="form-body">
+7:                  <%= f.text_area :content value: @task.content %>
+8:                  <label class="control-label" for="">期限</label>
+9:                  <%= f.datetime_local_field :deadline value: @task.deadline %>
+10:                  <label class="control-label" for="">タグ</label>
+11:                  <%= f.text_field :tag value: @task.tag%>
+12:                  <%= f.submit "保存" %>
+13:                </div>
+14:              </div>
+15:            <% end %>  
+16:        </div>
+17:    </div>
+  
+app/views/tasks/edit.html.erb:7: syntax error, unexpected local variable or method, expecting ')'
+app/views/tasks/edit.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/tasks/edit.html.erb:11: syntax error, unexpected local variable or method, expecting ')'
+app/views/tasks/edit.html.erb:7: syntax error, unexpected local variable or method, expecting ')'
+app/views/tasks/edit.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/tasks/edit.html.erb:11: syntax error, unexpected local variable or method, expecting ')'
+app/views/tasks/edit.html.erb:7: syntax error, unexpected local variable or method, expecting ')'
+app/views/tasks/edit.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/tasks/edit.html.erb:11: syntax error, unexpected local variable or method, expecting ')'
+app/views/tasks/edit.html.erb:7: syntax error, unexpected local variable or method, expecting ')'
+app/views/tasks/edit.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/tasks/edit.html.erb:11: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:50:33 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2201)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 4041)
+Completed 200 OK in 16ms (Views: 10.4ms | ActiveRecord: 0.1ms | Allocations: 5345)
+
+
+Started GET "/tasks/19" for ::1 at 2024-09-16 13:50:49 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 307)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 1945)
+Completed 200 OK in 14ms (Views: 8.3ms | ActiveRecord: 0.2ms | Allocations: 2760)
+
+
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:50:52 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1912)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3404)
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 4159)
+
+
+Started POST "/tasks/19/update" for ::1 at 2024-09-16 13:51:21 +0900
+Processing by TasksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"基本情報P220～", "deadline"=>"2024-09-17T23:59", "tag"=>"勉強", "commit"=>"保存", "id"=>"19"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:30:in `update'
+Completed 400 Bad Request in 7ms (ActiveRecord: 0.2ms | Allocations: 1192)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:51:in `task_params'
+app/controllers/tasks_controller.rb:34:in `update'
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:51:21 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1898)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3409)
+Completed 200 OK in 13ms (Views: 8.3ms | ActiveRecord: 0.1ms | Allocations: 4165)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 13:51:45 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 863)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 2515)
+Completed 200 OK in 14ms (Views: 10.2ms | ActiveRecord: 0.2ms | Allocations: 2880)
+
+
+Started GET "/tasks/19" for ::1 at 2024-09-16 13:51:47 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1721)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.1ms | Allocations: 2476)
+
+
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:52:28 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1887)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 3379)
+Completed 200 OK in 40ms (Views: 32.2ms | ActiveRecord: 0.2ms | Allocations: 4134)
+
+
+Started POST "/tasks/19/update" for ::1 at 2024-09-16 13:52:50 +0900
+Processing by TasksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"基本情報", "deadline"=>"", "tag"=>"勉強", "commit"=>"保存", "id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:30:in `update'
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.1ms | Allocations: 1136)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:51:in `task_params'
+app/controllers/tasks_controller.rb:34:in `update'
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:52:50 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1892)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3403)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.1ms | Allocations: 4157)
+
+
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:53:56 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 10.5ms | Allocations: 3414)
+  Rendered layout layouts/application.html.erb (Duration: 81.0ms | Allocations: 37784)
+Completed 200 OK in 128ms (Views: 88.7ms | ActiveRecord: 0.9ms | Allocations: 50439)
+
+
+Started POST "/tasks/19/update" for ::1 at 2024-09-16 13:53:59 +0900
+Processing by TasksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"基本情報", "deadline"=>"", "tag"=>"勉強", "commit"=>"保存", "id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:30:in `update'
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.1ms | Allocations: 1254)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:51:in `task_params'
+app/controllers/tasks_controller.rb:34:in `update'
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:54:00 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1901)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3414)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.2ms | Allocations: 4174)
+
+
+Started POST "/tasks/19/update" for ::1 at 2024-09-16 13:54:16 +0900
+Processing by TasksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"基本情報P220～", "deadline"=>"2024-09-18T00:00", "tag"=>"勉強", "commit"=>"保存", "id"=>"19"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:30:in `update'
+Completed 400 Bad Request in 6ms (ActiveRecord: 0.2ms | Allocations: 1172)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:51:in `task_params'
+app/controllers/tasks_controller.rb:34:in `update'
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:54:16 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1916)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3429)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.1ms | Allocations: 4184)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 13:54:18 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 949)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2589)
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.2ms | Allocations: 2983)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 13:54:39 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 5834)
+  Rendered layout layouts/application.html.erb (Duration: 116.5ms | Allocations: 40537)
+Completed 200 OK in 143ms (Views: 122.7ms | ActiveRecord: 0.7ms | Allocations: 46434)
+
+
+Started GET "/tasks/19" for ::1 at 2024-09-16 13:54:40 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 330)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 1969)
+Completed 200 OK in 14ms (Views: 6.7ms | ActiveRecord: 0.2ms | Allocations: 4649)
+
+
+Started GET "/tasks/19/destroy" for ::1 at 2024-09-16 13:54:42 +0900
+Processing by TasksController#destroy as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:44:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:45:in `destroy'
+  [1m[36mTask Destroy (2.5ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 19]]
+  ↳ app/controllers/tasks_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (9.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:45:in `destroy'
+Redirected to http://localhost:3000/tasks/index
+Completed 302 Found in 21ms (ActiveRecord: 12.8ms | Allocations: 2423)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 13:54:42 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 617)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2265)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.1ms | Allocations: 2572)
+
+
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:54:42 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 10.9ms | Allocations: 1593)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 1674)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.1ms | Allocations: 2482)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil):
+    1: <div class="main tasks-new">
+    2:     <div class="container">
+    3:       <h1 class="form-heading">編集</h1>
+    4:         <%= form_with url: "/tasks/#{@task.id}/update", method: :post, local: true do |f| %>
+    5:           <div class="form">
+    6:             <div class="form-body">
+    7:               <%= f.text_area :content, value: @task.content %>
+  
+app/views/tasks/edit.html.erb:4
+Started GET "/tasks/19/edit" for ::1 at 2024-09-16 13:56:35 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1758)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1854)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.5ms | Allocations: 10059)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil):
+    1: <div class="main tasks-new">
+    2:     <div class="container">
+    3:       <h1 class="form-heading">編集</h1>
+    4:         <%= form_with url: "/tasks/#{@task.id}/update", method: :post, local: true do |f| %>
+    5:           <div class="form">
+    6:             <div class="form-body">
+    7:               <%= f.text_area :content, value: @task.content %>
+  
+app/views/tasks/edit.html.erb:4
+Started GET "/" for ::1 at 2024-09-16 13:57:11 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.8ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 88.2ms | Allocations: 34722)
+Completed 200 OK in 96ms (Views: 93.3ms | ActiveRecord: 0.0ms | Allocations: 35418)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 13:57:13 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 32.0ms | Allocations: 5393)
+  Rendered layout layouts/application.html.erb (Duration: 37.6ms | Allocations: 7125)
+Completed 200 OK in 45ms (Views: 39.4ms | ActiveRecord: 0.8ms | Allocations: 7538)
+
+
+Started GET "/tasks/18" for ::1 at 2024-09-16 13:57:14 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 327)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 1980)
+Completed 200 OK in 11ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 2807)
+
+
+Started GET "/tasks/18" for ::1 at 2024-09-16 13:57:14 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 1764)
+Completed 200 OK in 11ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 2531)
+
+
+Started GET "/tasks/18" for ::1 at 2024-09-16 13:57:15 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 1729)
+Completed 200 OK in 14ms (Views: 8.3ms | ActiveRecord: 0.2ms | Allocations: 2484)
+
+
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 13:57:22 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2591)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 4084)
+Completed 200 OK in 21ms (Views: 17.4ms | ActiveRecord: 0.1ms | Allocations: 4850)
+
+
+Started POST "/tasks/18/update" for ::1 at 2024-09-16 13:57:39 +0900
+Processing by TasksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"スクワット10回", "deadline"=>"2024-09-18T00:00", "tag"=>"筋トレ", "commit"=>"保存", "id"=>"18"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:30:in `update'
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.1ms | Allocations: 1204)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:51:in `task_params'
+app/controllers/tasks_controller.rb:34:in `update'
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 13:57:39 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1890)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3401)
+Completed 200 OK in 11ms (Views: 5.2ms | ActiveRecord: 0.2ms | Allocations: 4157)
+
+
+Started GET "/about" for ::1 at 2024-09-16 13:58:38 +0900
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 1.2ms | Allocations: 105)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 1734)
+Completed 200 OK in 15ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 2068)
+
+
+Started GET "/about" for ::1 at 2024-09-16 14:00:09 +0900
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+  Rendered layout layouts/application.html.erb (Duration: 93.9ms | Allocations: 15297)
+Completed 200 OK in 102ms (Views: 97.5ms | ActiveRecord: 0.0ms | Allocations: 15830)
+
+
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:00:11 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1880)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 3443)
+Completed 200 OK in 89ms (Views: 62.3ms | ActiveRecord: 4.5ms | Allocations: 7837)
+
+
+Started POST "/tasks/18/update" for ::1 at 2024-09-16 14:00:18 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/tasks/18/update"):
+  
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:00:18 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1917)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 3428)
+Completed 200 OK in 36ms (Views: 27.0ms | ActiveRecord: 0.3ms | Allocations: 4182)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 14:00:24 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 671)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 2320)
+Completed 200 OK in 31ms (Views: 23.8ms | ActiveRecord: 0.6ms | Allocations: 2645)
+
+
+Started POST "/tasks/18/update" for ::1 at 2024-09-16 14:01:10 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/tasks/18/update"):
+  
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:01:11 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1901)
+  Rendered layout layouts/application.html.erb (Duration: 61.5ms | Allocations: 17029)
+Completed 200 OK in 83ms (Views: 65.1ms | ActiveRecord: 2.3ms | Allocations: 21351)
+
+
+Started POST "/tasks/18/update" for ::1 at 2024-09-16 14:03:06 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/tasks/18/update"):
+  
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:03:07 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2172)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 4012)
+Completed 200 OK in 28ms (Views: 20.5ms | ActiveRecord: 0.3ms | Allocations: 5279)
+
+
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:03:45 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 35.0ms | Allocations: 3413)
+  Rendered layout layouts/application.html.erb (Duration: 200.0ms | Allocations: 37973)
+Completed 200 OK in 290ms (Views: 219.6ms | ActiveRecord: 1.9ms | Allocations: 50622)
+
+
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:03:47 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1907)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 3401)
+Completed 200 OK in 25ms (Views: 16.5ms | ActiveRecord: 0.3ms | Allocations: 4173)
+
+
+Started POST "/tasks/18" for ::1 at 2024-09-16 14:03:48 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/tasks/18"):
+  
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:03:49 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1890)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 3403)
+Completed 200 OK in 51ms (Views: 34.1ms | ActiveRecord: 0.5ms | Allocations: 4173)
+
+
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:04:15 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 25.2ms | Allocations: 3398)
+  Rendered layout layouts/application.html.erb (Duration: 216.9ms | Allocations: 38001)
+Completed 200 OK in 340ms (Views: 241.3ms | ActiveRecord: 3.6ms | Allocations: 50650)
+
+
+Started POST "/tasks/18" for ::1 at 2024-09-16 14:04:19 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/tasks/18"):
+  
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:04:19 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1884)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 3397)
+Completed 200 OK in 22ms (Views: 14.9ms | ActiveRecord: 0.2ms | Allocations: 4171)
+
+
+Started POST "/tasks/18" for ::1 at 2024-09-16 14:04:39 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/tasks/18"):
+  
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:04:40 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1896)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 3409)
+Completed 200 OK in 41ms (Views: 29.6ms | ActiveRecord: 0.3ms | Allocations: 4175)
+
+
+Started POST "/tasks/18" for ::1 at 2024-09-16 14:05:36 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/tasks/18"):
+  
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:05:37 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 15.5ms | Allocations: 2794)
+  Rendered layout layouts/application.html.erb (Duration: 239.4ms | Allocations: 37349)
+Completed 200 OK in 337ms (Views: 253.1ms | ActiveRecord: 3.4ms | Allocations: 47791)
+
+
+Started POST "/tasks/18/update" for ::1 at 2024-09-16 14:05:58 +0900
+Processing by TasksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"スクワット100回", "deadline"=>"", "tag"=>"筋トレ", "commit"=>"保存", "id"=>"18"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:31:in `update'
+Completed 400 Bad Request in 7ms (ActiveRecord: 0.2ms | Allocations: 1257)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:52:in `task_params'
+app/controllers/tasks_controller.rb:35:in `update'
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:05:59 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1911)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 3424)
+Completed 200 OK in 23ms (Views: 17.0ms | ActiveRecord: 0.2ms | Allocations: 4182)
+
+
+Started POST "/tasks/18/update" for ::1 at 2024-09-16 14:06:22 +0900
+Processing by TasksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"スクワット100回", "deadline"=>"2024-10-02T14:06", "tag"=>"筋トレ", "commit"=>"保存", "id"=>"18"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:31:in `update'
+Completed 400 Bad Request in 8ms (ActiveRecord: 0.2ms | Allocations: 1160)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:52:in `task_params'
+app/controllers/tasks_controller.rb:35:in `update'
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:06:22 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1905)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 3418)
+Completed 200 OK in 30ms (Views: 23.6ms | ActiveRecord: 0.2ms | Allocations: 4174)
+
+
+Started POST "/tasks/18/update" for ::1 at 2024-09-16 14:07:58 +0900
+Processing by TasksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"スクワット100回", "deadline"=>"2024-10-11T14:07", "tag"=>"筋トレ", "commit"=>"保存", "id"=>"18"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:31:in `update'
+Completed 400 Bad Request in 36ms (ActiveRecord: 3.5ms | Allocations: 4451)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:53:in `task_params'
+app/controllers/tasks_controller.rb:35:in `update'
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:08:00 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1951)
+  Rendered layout layouts/application.html.erb (Duration: 98.0ms | Allocations: 17079)
+Completed 200 OK in 112ms (Views: 101.7ms | ActiveRecord: 0.4ms | Allocations: 18064)
+
+
+Started GET "/" for ::1 at 2024-09-16 14:08:33 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 3.9ms | Allocations: 338)
+  Rendered layout layouts/application.html.erb (Duration: 168.2ms | Allocations: 35086)
+Completed 200 OK in 258ms (Views: 186.8ms | ActiveRecord: 0.0ms | Allocations: 39614)
+
+
+Started POST "/tasks/18/update" for ::1 at 2024-09-16 14:08:42 +0900
+Processing by TasksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"スクワット10あああ0回", "deadline"=>"2024-10-09T14:08", "tag"=>"筋トレ", "commit"=>"保存", "id"=>"18"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:31:in `update'
+Completed 400 Bad Request in 43ms (ActiveRecord: 1.8ms | Allocations: 8838)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:53:in `task_params'
+app/controllers/tasks_controller.rb:35:in `update'
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:08:42 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 19.5ms | Allocations: 2971)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 4553)
+Completed 200 OK in 48ms (Views: 42.3ms | ActiveRecord: 0.2ms | Allocations: 5671)
+
+
+Started POST "/tasks/18/update" for ::1 at 2024-09-16 14:09:51 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"スクワット100回", "deadline"=>"2024-09-17T14:09", "tag"=>"筋トレ", "commit"=>"保存", "id"=>"18"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:31:in `update'
+Completed 400 Bad Request in 81ms (ActiveRecord: 2.0ms | Allocations: 10347)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:53:in `task_params'
+app/controllers/tasks_controller.rb:35:in `update'
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:09:52 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 21.7ms | Allocations: 2999)
+  Rendered layout layouts/application.html.erb (Duration: 231.8ms | Allocations: 37469)
+Completed 200 OK in 258ms (Views: 245.8ms | ActiveRecord: 0.3ms | Allocations: 38984)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 14:09:54 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 887)
+  Rendered layout layouts/application.html.erb (Duration: 45.9ms | Allocations: 2535)
+Completed 200 OK in 57ms (Views: 49.2ms | ActiveRecord: 0.4ms | Allocations: 2941)
+
+
+Started GET "/tasks/18/edit" for 127.0.0.1 at 2024-09-16 14:12:07 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 13.8ms | Allocations: 3409)
+  Rendered layout layouts/application.html.erb (Duration: 181.2ms | Allocations: 37732)
+Completed 200 OK in 260ms (Views: 196.2ms | ActiveRecord: 1.8ms | Allocations: 50381)
+
+
+Started POST "/tasks/18/update" for ::1 at 2024-09-16 14:12:14 +0900
+Processing by TasksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"スクワット100回ああああ", "deadline"=>"2024-10-11T14:12", "tag"=>"筋トレ", "commit"=>"保存", "id"=>"18"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:31:in `update'
+Completed 400 Bad Request in 13ms (ActiveRecord: 0.4ms | Allocations: 1257)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:54:in `task_params'
+app/controllers/tasks_controller.rb:35:in `update'
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:12:14 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1905)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 3418)
+Completed 200 OK in 29ms (Views: 21.0ms | ActiveRecord: 0.4ms | Allocations: 4182)
+
+
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:14:04 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1889)
+  Rendered layout layouts/application.html.erb (Duration: 73.4ms | Allocations: 17023)
+Completed 200 OK in 112ms (Views: 79.0ms | ActiveRecord: 2.9ms | Allocations: 21382)
+
+
+Started POST "/tasks/18/update" for ::1 at 2024-09-16 14:14:12 +0900
+Processing by TasksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"スクワット100回", "deadline"=>"2024-09-24T14:14", "tag"=>"筋トレ", "commit"=>"保存", "id"=>"18"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:31:in `update'
+Completed 400 Bad Request in 8ms (ActiveRecord: 0.2ms | Allocations: 1160)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:55:in `task_params'
+app/controllers/tasks_controller.rb:34:in `update'
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:14:12 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1896)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 3408)
+Completed 200 OK in 35ms (Views: 28.3ms | ActiveRecord: 0.3ms | Allocations: 4164)
+
+
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:14:34 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 20.0ms | Allocations: 3406)
+  Rendered layout layouts/application.html.erb (Duration: 177.0ms | Allocations: 37982)
+Completed 200 OK in 277ms (Views: 192.3ms | ActiveRecord: 2.2ms | Allocations: 50631)
+
+
+Started POST "/tasks/18/update" for ::1 at 2024-09-16 14:14:42 +0900
+Processing by TasksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"スクワット100回ああ", "deadline"=>"2024-09-18T14:14", "tag"=>"筋トレ", "commit"=>"保存", "id"=>"18"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:31:in `update'
+Completed 400 Bad Request in 128ms (ActiveRecord: 0.5ms | Allocations: 1248)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:55:in `task_params'
+app/controllers/tasks_controller.rb:34:in `update'
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:14:43 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1896)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 3409)
+Completed 200 OK in 26ms (Views: 15.9ms | ActiveRecord: 0.5ms | Allocations: 4170)
+
+
+Started GET "/tasks/18/edit" for 127.0.0.1 at 2024-09-16 14:26:11 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:25:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 33.5ms | Allocations: 3409)
+  Rendered layout layouts/application.html.erb (Duration: 244.2ms | Allocations: 37985)
+Completed 200 OK in 389ms (Views: 270.9ms | ActiveRecord: 2.7ms | Allocations: 50631)
+
+
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:26:14 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:25:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1910)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 3404)
+Completed 200 OK in 22ms (Views: 14.8ms | ActiveRecord: 0.3ms | Allocations: 4175)
+
+
+Started POST "/tasks/18/update" for ::1 at 2024-09-16 14:26:22 +0900
+Processing by TasksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"スクワット100回", "deadline"=>"2024-09-25T14:26", "tag"=>"筋トレ", "commit"=>"保存", "id"=>"18"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:29:in `update'
+[31mUnpermitted parameters: :authenticity_token, :content, :deadline, :tag, :commit, :id. Context: { controller: TasksController, action: update, request: #<ActionDispatch::Request:0x0000020544e405c0>, params: {"authenticity_token"=>"[FILTERED]", "content"=>"スクワット100回", "deadline"=>"2024-09-25T14:26", "tag"=>"筋トレ", "commit"=>"保存", "controller"=>"tasks", "action"=>"update", "id"=>"18"} }[0m
+Redirected to http://localhost:3000/tasks/index
+Completed 302 Found in 85ms (ActiveRecord: 0.3ms | Allocations: 1580)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 14:26:22 +0900
+Processing by TasksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 879)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 2539)
+Completed 200 OK in 37ms (Views: 30.0ms | ActiveRecord: 0.8ms | Allocations: 2975)
+
+
+Started GET "/" for ::1 at 2024-09-16 14:27:50 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 1.7ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 1877)
+Completed 200 OK in 38ms (Views: 31.3ms | ActiveRecord: 0.0ms | Allocations: 2534)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 14:28:27 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 36.7ms | Allocations: 5763)
+  Rendered layout layouts/application.html.erb (Duration: 252.5ms | Allocations: 40905)
+Completed 200 OK in 332ms (Views: 274.5ms | ActiveRecord: 2.8ms | Allocations: 46802)
+
+
+Started GET "/tasks/index" for ::1 at 2024-09-16 14:28:30 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."deadline" DESC[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 623)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 2268)
+Completed 200 OK in 24ms (Views: 19.0ms | ActiveRecord: 0.4ms | Allocations: 2584)
+
+
+Started GET "/tasks/18" for ::1 at 2024-09-16 14:28:31 +0900
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 331)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 1984)
+Completed 200 OK in 42ms (Views: 20.2ms | ActiveRecord: 0.7ms | Allocations: 4660)
+
+
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:28:33 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:25:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 33.1ms | Allocations: 2823)
+  Rendered layout layouts/application.html.erb (Duration: 45.3ms | Allocations: 4317)
+Completed 200 OK in 59ms (Views: 47.4ms | ActiveRecord: 0.3ms | Allocations: 5144)
+
+
+Started POST "/tasks/18/update" for ::1 at 2024-09-16 14:28:41 +0900
+Processing by TasksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "content"=>"スクワット100回", "deadline"=>"2024-09-25T14:28", "tag"=>"筋トレ", "commit"=>"保存", "id"=>"18"}
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:29:in `update'
+Completed 400 Bad Request in 25ms (ActiveRecord: 1.2ms | Allocations: 1256)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:49:in `task_params'
+app/controllers/tasks_controller.rb:31:in `update'
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:28:42 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:25:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1912)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 3425)
+Completed 200 OK in 40ms (Views: 28.7ms | ActiveRecord: 0.3ms | Allocations: 4184)
+
+
+Started GET "/tasks/18/edit" for ::1 at 2024-09-16 14:32:29 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:25:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1296)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1378)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.5ms | Allocations: 2668)
+
+
+  
+ActionView::Template::Error (undefined method `task_path' for an instance of #<Class:0x00000185a4c647f8>):
+    1: <div class="main tasks-new">
+    2:     <div class="container">
+    3:       <h1 class="form-heading">編集</h1>
+    4:       <%= form_with model: @task, local: true do |f| %>
+    5:         <div class="form">
+    6:           <div class="form-body">
+    7:             <%= f.text_area :content %>
+  
+app/views/tasks/edit.html.erb:4

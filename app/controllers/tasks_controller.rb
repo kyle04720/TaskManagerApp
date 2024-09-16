@@ -6,13 +6,12 @@ class TasksController < ApplicationController
   def show
     @task = Task.find_by(id: params[:id])
   end
-  
+
   def new
-    
   end
 
   def create
-    @task = Task.new(content: params[:content], deadline: params[:deadline], tag: params[:tag])
+    @task = Task.new(task_params)
     
     if @task.save
       redirect_to("/tasks/index")
@@ -45,8 +44,9 @@ class TasksController < ApplicationController
   end
 
   private
+
   def task_params
-    params.require(:task).permit(:content, :deadline)
+    params.require(:task).permit(:content, :deadline, :tag)
   end
 
 end

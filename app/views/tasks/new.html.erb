@@ -1,7 +1,7 @@
 <div class="main tasks-new">
     <div class="container">
       <h1 class="form-heading">新規TODO作成</h1>
-        <%= form_with url: "/tasks/create", local:true do |f| %>
+        <%= form_with url: "/tasks/create", method: :post,local:true do |f| %>
           <div class="form">
             <div class="form-body">
               <%= f.text_area :content %>
